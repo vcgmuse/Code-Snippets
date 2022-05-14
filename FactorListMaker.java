@@ -11,9 +11,9 @@ public class FactorListMaker {
             int factor = 5;
             while (factor == 4 || num % factor != 0)
                 factor--;
-            System.out.println(getFactorList(num, factor));
-            System.out.println(getFactorList(num, factor).size());
+            answer.add(getFactorList(num, factor).size());
         }
+        System.out.println(answer);
         return answer;
     }
 
