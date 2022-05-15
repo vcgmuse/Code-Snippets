@@ -11,6 +11,8 @@ public class FactorListMaker {
             int factor = 5;
             while (factor == 4 || num % factor != 0)
                 factor--;
+            System.out.println(getFactorList(num, factor));
+            System.out.println(getFactorList(num, factor).size());
             answer.add(getFactorList(num, factor).size());
         }
         System.out.println(answer);
@@ -25,7 +27,7 @@ public class FactorListMaker {
             return tempList;
         }
 
-        for (int i = factor; i <= value; i += factor) {
+        for (int i = factor; i <= value && i <= value/2; i += factor) {
             if (value % i == 0) {
                 if (!tempList.contains(i)) {
                     tempList.add(i);
@@ -35,6 +37,10 @@ public class FactorListMaker {
                 }
             }
         }
+        if (!tempList.contains(1))
+            tempList.add(1);
+        if (!tempList.contains(value))
+            tempList.add(value);
         return tempList;
     }
 }
