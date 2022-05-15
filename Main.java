@@ -17,7 +17,7 @@ public class Main {
         arrayList.add(2348);
         arrayList.add(2347);
         arrayList.add(872324);
-        FactorListMaker.determineInteractions(arrayList);
+        FactorListMaker.returnListOfInteractions(arrayList);
     }
 }
 
