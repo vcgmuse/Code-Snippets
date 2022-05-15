@@ -1,11 +1,12 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class FactorListMaker {
 
-    public static List<Integer> determineInteractions(List<Integer> integerList) {
+    public static List<Integer> returnListOfInteractions(List<Integer> integerList) {
         List<Integer> answer = new ArrayList<>();
         for (Integer num : integerList) {
             int factor = 5;
@@ -41,6 +42,7 @@ public class FactorListMaker {
             tempList.add(1);
         if (!tempList.contains(value))
             tempList.add(value);
+        Collections.sort(tempList);
         return tempList;
     }
 }
