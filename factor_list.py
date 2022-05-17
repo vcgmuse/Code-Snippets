@@ -15,9 +15,9 @@ def get_factor(int_value):
 
 def return_list_of_interactions(total_number_of_locker):
     answer = []
-    for n in range(1, total_number_of_locker + 1):
-        factor = get_factor(n)
-        answer.append(len(get_factor_list(n, factor)))
+    for iteration in range(1, total_number_of_locker + 1):
+        factor = get_factor(iteration)
+        answer.append(len(get_factor_list(iteration, factor)))
         # TODO: Complete with getFactorList
     return answer
 
@@ -33,13 +33,13 @@ def get_factor_list(value, factor):
             temp_list.append(factor)
         temp_list.sort()
         return temp_list
-    for n in range(1, int(value / 2) + 1):
+    for iteration in range(1, int(value / 2) + 1):
         counter += 1
-        if n % factor == 0:
+        if iteration % factor == 0:
             if factor not in temp_list:
                 temp_list.append(factor)
-            if int(n / 2) not in temp_list:
-                temp_list.append(int(n / 2))
+            if int(iteration / 2) not in temp_list:
+                temp_list.append(int(iteration / 2))
     if 1 not in temp_list:
         temp_list.append(1)
     if value not in temp_list:
