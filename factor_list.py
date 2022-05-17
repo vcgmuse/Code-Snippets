@@ -17,7 +17,7 @@ def return_list_of_interactions(total_number_of_locker):
     answer = []
     for n in range(1, total_number_of_locker + 1):
         factor = get_factor(n)
-        answer.append(get_factor_list(n, factor))
+        answer.append(len(get_factor_list(n, factor)))
         # TODO: Complete with getFactorList
     return answer
 
