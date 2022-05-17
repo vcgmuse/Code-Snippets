@@ -33,7 +33,7 @@ def get_factor_list(value, factor):
             temp_list.append(factor)
         temp_list.sort()
         return temp_list
-    for iteration in range(1, int(value / 2) + 1):
+    for iteration in range(factor, int(value / 2) + 1, factor):
         counter += 1
         if iteration % factor == 0:
             if factor not in temp_list:
@@ -48,4 +48,4 @@ def get_factor_list(value, factor):
     return temp_list
 
 
-print(return_list_of_interactions(25))
+print(return_list_of_interactions(10000))
